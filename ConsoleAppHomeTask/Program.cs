@@ -10,6 +10,7 @@ namespace ConsoleAppHomeTask
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world!");
         }
     }
 }
