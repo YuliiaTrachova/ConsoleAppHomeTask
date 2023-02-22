@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppHomeTask
 {
-    enum TransactionType { Buy, Sell }
+
     class Program
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello world!");
-            //Console.WriteLine("Feature branch 1 - development 1");
-            //Console.WriteLine("Feature branch 1 - development 2");
-
             //Assignment 1
             Console.WriteLine("Input the nominal of the trade:");
             int nominal = int.Parse(Console.ReadLine());
@@ -30,37 +26,20 @@ namespace ConsoleAppHomeTask
             var currentValue = nominal * tradePrice * sign;
             Console.WriteLine($"Current value is {currentValue}");
 
-           
+
             //Assignment 2
-            
-             Console.WriteLine("Input the original price:");
-             double originPrice = double.Parse(Console.ReadLine());
 
-             int sellTrc = trcType is TransactionType.Sell ? 1 : 0;
-               
-             var profitLoss = (tradePrice - originPrice) * nominal * sellTrc;
-             var result = profitLoss > 0 ? "profit" : "loss";
-             Console.WriteLine($"Your {result} is {profitLoss}");
+            Console.WriteLine("Input the original price:");
+            double originPrice = double.Parse(Console.ReadLine());
 
-             Console.ReadKey();
+            int sellTrc = trcType is TransactionType.Sell ? 1 : 0;
 
-                ////Option 2 Assignment 2
-                //if (trcType is TransactionType.Buy)
-                //{
-                //    Console.ReadKey();
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Input the original price:");
-                //    double originPrice = double.Parse(Console.ReadLine());
+            var profitLoss = (tradePrice - originPrice) * nominal * sellTrc;
+            var result = profitLoss > 0 ? "profit" : "loss";
+            Console.WriteLine($"Your {result} is {profitLoss}");
 
-                    
-                //    var profitLoss = (tradePrice - originPrice) * nominal;
-                //    var result = profitLoss > 0 ? "profit" : "loss";
-                //    Console.WriteLine($"Your {result} is {profitLoss}");
-
-                //    Console.ReadKey();
-                }
+            Console.ReadKey();
         }
     }
+}
 
